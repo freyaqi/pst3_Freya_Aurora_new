@@ -1,6 +1,7 @@
 ---
 title: "30538 Problem Set 3: git pair"
-author: "Aurora Zhang"
+author: "Aurora Zhang", "Yuan Qi"
+
 format: 
   pdf:
     include-in-header: 
