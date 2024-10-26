@@ -1,6 +1,7 @@
 ---
 title: "30538 Problem Set 3: git pair"
-author: "Yuan Qi"
+author: "Aurora Zhang", "Yuan Qi"
+
 format: 
   pdf:
     include-in-header: 
@@ -27,22 +28,16 @@ np.random.seed(42)
 data = pd.DataFrame(np.random.rand(100), columns=['Random Numbers'])
 
 def preview_data(df):
-    print(df.head())
-
-
-def preview_data(df):
-    # Get the first few rows of data
     head_data = df.head()
-    
-    # Create a histogram using altair
+    describe_data = df.describe()
     histogram = alt.Chart(df).mark_bar().encode(
         x='Random Numbers',
         y='count()'
     )
-    
-    # Return a list containing the first few rows of the data and the histogram
-    return [head_data, histogram]
+    return [head_data, describe_data, histogram]
 
+print(preview_data(data)[0])
+print(preview_data(data)[1])
+preview_data(data)[2]
 
-preview_data(data)
 ```
